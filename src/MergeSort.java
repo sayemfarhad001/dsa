@@ -14,26 +14,32 @@ public class MergeSort {
     }
 
     private static void merge(int[] arr, int l, int mid, int r) {
-        int n1 = mid - l +1;
-        int n2 = r - mid;
-
+        //array size
+        int n1 = mid - l +1;        //Left array
+        int n2 = r - mid;           //Right array
+        //declare left and right arrays with size
         int lArr[] = new int[n1];
         int rArr[] = new int[n2];
 
+        //For Loop 1 - COPY VALUES Left Array
         for(int x=0; x<n1; x++){
             lArr[x] = arr[l+x];
         }
 
+        //For Lopp 2 - COPY VALUES Right Array
         for(int x=0; x<n2; x++){
             rArr[x] = arr[mid+1+x];
         }
 
-        int i =0;
-        int j = 0;
-        int k= l;
+        //MERGING - 3 while loops
+        int i = 0;  //First array
+        int j = 0;  //Second array
+        int k= l;   //Main merged array
 
+        //While Loop 1 - MERGING
         while(i<n1 && j<n2){
 
+            //Compare 5,8,9 vs 1,6,7 and place
             if (lArr[i] <= rArr[j]){
                 arr[k] = lArr[i];
                 i++;
@@ -44,11 +50,13 @@ public class MergeSort {
             k++;
         }
 
+        //Left out values after merge in left array
         while(i<n1){
             arr[k] = lArr[i];
             i++;
             k++;
         }
+        //Left out values after merge in right array
         while(j<n2){
             arr[k] = rArr[j];
             j++;
