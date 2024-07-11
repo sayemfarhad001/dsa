@@ -1,3 +1,7 @@
+DSA [Telusko]
+
+https://www.youtube.com/watch?v=xWLxhF3b5P8
+
 00:00:00  -  What are Data Structures and Algorithm
 00:07:03  -  Abstract Data Types
 00:14:19  -  Arrays

@@ -13,6 +13,7 @@ public class Search {
 
     }
 
+    //SLOW - DO NOT USE
     public static int linearSearch(int[] nums, int target){
         for(int i=0; i < nums.length; i++){
             if(nums[i]== target){
@@ -23,6 +24,7 @@ public class Search {
         return -1;
     }
 
+    //SLOW - DO NOT USE
     public static int binarySearch(int[] nums, int target){
         int left = 0;
         int right = nums.length-1;
@@ -40,7 +42,7 @@ public class Search {
         return -1;
     }
 
-
+    //BETTER - USE
     public static int recursiveBinarySearch(int[] nums, int target, int left, int right){
 //        int left = 0;
 //        int right = nums.length-1;
